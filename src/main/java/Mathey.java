@@ -7,7 +7,13 @@ public class Mathey {
      * You will need to practice writing the method signature below!
      * public static ...
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int max(int a, int b){
+        if (a>b){
+            return a;
+        }
+        return b;
+
+    }
 
 
 
@@ -15,7 +21,12 @@ public class Mathey {
     /* Write another method called max that takes **two doubles**
      * Ex. max(1, 4, 2) => 4
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static double max(double a, double b){
+        if (a>b){
+            return a;
+        }
+        return b;
+    }
 
 
 
@@ -23,7 +34,9 @@ public class Mathey {
     /* Write another method called max that takes **three integers**
      * Ex. max(1, 4, 2) => 4
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int max(int a, int b, int c){
+        return max(a,max(b,c));
+    }
 
 
 
@@ -31,8 +44,9 @@ public class Mathey {
     /* Write another method called max that takes **four doubles**
      * Ex. max(1.0, 4.25, 2.1) => 4.25
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
+    public static double max(double a, double b, double c, double d){
+        return max(a,max(b,max(c,d)));
+    }
 
 
 
@@ -43,7 +57,9 @@ public class Mathey {
      *     randomInteger(1, 4) => 2
      *     randomInteger(1, 4) => 4
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int randomInteger(int a, int b){
+        return (int) (Math.random()*(a+1))+a;
+    }
 
 
 
@@ -55,7 +71,9 @@ public class Mathey {
      *     randomInteger(5) => 5
      *     randomInteger(5) => 0
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int randomInteger(int a){
+        return (int) (Math.random()*(a+1));
+    }
 
 
 
@@ -71,7 +89,13 @@ public class Mathey {
      * Ex. pow(2, 5) => 32
      *     pow(3, 4) => 81
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int pow(int a, int b){
+        int product=1;
+        for (int i= 0; i<b;i++){
+           product*=a;
+        }
+        return product;
+    }
 
 
 
@@ -81,7 +105,12 @@ public class Mathey {
      * Ex. abs(2) => 2
      *     abs(-2) => 2
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int abs(int a){
+        if (a>=0){
+            return a;
+        }
+        return -1*a;
+    }
 
 
 
@@ -92,7 +121,9 @@ public class Mathey {
      * Ex. round(2.4) => 2
      *     round(2.5) => 2
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int round(double a){
+        return (int) (a+0.5);
+    }
 
 
 
@@ -106,7 +137,9 @@ public class Mathey {
      * Ex. floor(2.4) => 2
      *     floor(2.999999999999) => 2
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int floor(double a){
+        return (int) a;
+    }
 
 
 
@@ -120,7 +153,13 @@ public class Mathey {
      * Ex. ceil(2.99999) => 3
      *     ceil(3.01) => 4
      */
-    // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static int ceil(double a){
+        int ceil= (int) (a+1);
+        if (ceil-a==1){
+            return (int) a;
+        }
+        return ceil;
+    }
 
 
 
